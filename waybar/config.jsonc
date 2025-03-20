@@ -1,0 +1,85 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,  
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["custom/shutdown", "tray", "custom/screenshot", "clock", "network", "pulseaudio", "battery", "memory", "cpu"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9"
+        },
+        "on-click": "activate",
+        "all-outputs": true
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50
+    },
+
+    "custom/shutdown": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    "custom/screenshot": {
+        "format": "s",
+        "on-click": "grim -g \"$(slurp)\" ~/screenshot.png",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 15
+    },
+
+    "clock": {
+        "format": "{:%H:%M %d.%m.%Y}",
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "   {signalStrength}%",
+        "format-disconnected": "   Disconnected",
+        "interval": 5,
+        "on-click": "$HOME/settings-menu/wifi.sh",  // Запуск wifi manager'a из settings-menu при нажатии
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "battery": {
+        "format": "{icon}   {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "ram  {}%",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": "   {}%",
+        "interval": 5,
+        "tooltip": false
+    }
+}

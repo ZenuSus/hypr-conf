@@ -1,0 +1,100 @@
+* {
+    border: none;
+    border-radius: 8px;
+    font-family: "Fira Code", "Font Awesome 5 Free";
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    
+}
+
+#workspaces button {
+    padding: 0 12px;
+    background: #313244;
+    color: #cdd6f4;
+    margin: 4px;
+    min-height: 30px;  
+}
+
+#workspaces button.active {
+    background: #89b4fa;
+    color: #1e1e2e;
+}
+
+#workspaces button:hover {
+    background: #585b70;
+}
+
+#window {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;  
+}
+
+#custom-shutdown {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#custom-screenshot {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#tray {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#clock {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#network {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#pulseaudio {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#battery {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#memory {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
+
+#cpu {
+    background: #313244;
+    padding: 0 12px;
+    margin: 4px;
+    min-height: 30px;
+}
