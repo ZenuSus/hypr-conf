@@ -34,11 +34,11 @@
         "tooltip": false
     },
 
-    "custom/screenshot": {
-        "format": "s",
-        "on-click": "grim -g \"$(slurp)\" ~/screenshot.png",
-        "tooltip": false
-    },
+"custom/screenshot": {
+    "format": "s",
+    "on-click": "grim -g \"$(slurp)\" ~/Pictures/screenshots/screenshot-$(date +\"%Y-%m-%d_%H-%M-%S\").png",
+    "tooltip": false
+},
 
     "tray": {
         "icon-size": 20,
@@ -54,7 +54,7 @@
         "format-wifi": "   {signalStrength}%",
         "format-disconnected": "   Disconnected",
         "interval": 5,
-        "on-click": "$HOME/settings-menu/wifi.sh",  // Запуск wifi manager'a из settings-menu при нажатии
+        "on-click": "bash $HOME/settings-menu/wifi.sh",  // Запуск wifi manager'a из settings-menu при нажатии
         "tooltip": false
     },
 
