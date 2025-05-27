@@ -8,7 +8,7 @@
 4. Можно использовать! Если что-то не так, обращайся в [чат канала](https://t.me/zenusuoff)
 
 > [!NOTE]
-> Не забудь установить `waybar`, `rofi` и `drun`
+> Не забудь установить `waybar`, `rofi` и `drun` <br>
 > Для лучшего вида установите [apple emoji font](https://github.com/samuelngs/apple-emoji-linux/releases)
 
 ## Скриншоты
