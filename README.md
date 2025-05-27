@@ -9,6 +9,7 @@
 
 > [!NOTE]
 > Не забудь установить `waybar`, `rofi` и `drun`
+> Для лучшего вида установите [apple emoji font](https://github.com/samuelngs/apple-emoji-linux/releases)
 
 ## Скриншоты
 ![Скриншот 1](/screenshots/1.png)
