@@ -1,12 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 40,  
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": [],
-    "modules-right": ["custom/shutdown", "tray", "custom/screenshot", "clock", "network", "pulseaudio", "battery", "memory", "cpu"],
-
-    "hyprland/workspaces": {
+    "height": 40,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces", "custom/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "network", "pulseaudio", "backlight", "battery", "custom/power", "custom/screenshot"],
+    
+"hyprland/workspaces": {
         "format": "{name}",
         "format-icons": {
             "1": "1",
@@ -22,64 +23,71 @@
         "on-click": "activate",
         "all-outputs": true
     },
-
-    "hyprland/window": {
+    
+    "custom/window": {
         "format": "{}",
+        "exec": "hyprctl activewindow | grep '^Window' | cut -d' ' -f2-",
+        "interval": 1,
         "max-length": 50
     },
-
-    "custom/shutdown": {
+    
+    "clock": {
+        "format": "{:%H:%M\n%d.%m.%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1
+    },
+    
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false,
+        "interval": 1,
+        "on-click": "kitty htop"
+    },
+    
+    "memory": {
+        "format": " {used:0.1f}G/{total:0.1f}G",
+        "interval": 5
+    },
+    
+    "network": {
+        "format-wifi": "   {essid} ({signalStrength}%)",
+        "format-disconnected": " No connection",
+        "interval": 5
+    },
+    
+    "pulseaudio": {
+        "format": "🔈 {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphones": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5
+    },
+    
+    "backlight": {
+        "format": "{icon}  {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 10
+    },
+    
+    "custom/power": {
         "format": "⏻",
         "on-click": "wlogout",
         "tooltip": false
     },
-
-"custom/screenshot": {
-    "format": "s",
-    "on-click": "grim -g \"$(slurp)\" ~/Pictures/screenshots/screenshot-$(date +\"%Y-%m-%d_%H-%M-%S\").png",
-    "tooltip": false
-},
-
-    "tray": {
-        "icon-size": 20,
-        "spacing": 15
-    },
-
-    "clock": {
-        "format": "{:%H:%M %d.%m.%Y}",
-        "tooltip": false
-    },
-
-    "network": {
-        "format-wifi": "   {signalStrength}%",
-        "format-disconnected": "   Disconnected",
-        "interval": 5,
-        "on-click": "bash $HOME/settings-menu/wifi.sh",  // Запуск wifi manager'a из settings-menu при нажатии
-        "tooltip": false
-    },
-
-    "pulseaudio": {
-        "format": "{icon}   {volume}%",
-        "format-icons": ["", "", ""],
-        "on-click": "pavucontrol",
-        "tooltip": false
-    },
-
-    "battery": {
-        "format": "{icon}   {capacity}%",
-        "format-icons": ["", "", "", "", ""],
-        "tooltip": false
-    },
-
-    "memory": {
-        "format": "ram  {}%",
-        "interval": 5,
-        "tooltip": false
-    },
-
-    "cpu": {
-        "format": "   {}%",
-        "interval": 5,
+    
+    "custom/screenshot": {
+        "format": "📸",
+        "on-click": "grim -g \"$(slurp)\" ~/Pictures/screenshots/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png",
         "tooltip": false
     }
 }
