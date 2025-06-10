@@ -11,6 +11,6 @@ My hyprland, waybar and etc. config
 > Don't forget to install `waybar`, `rofi` and `drun` <br>
 > For better expirience install the [apple emoji font](https://github.com/samuelngs/apple-emoji-linux/releases)
 
-## Скриншоты
+## Screenshoots
 ![Screenshoot 1](/screenshots/1.png)
 ![Screenshoot 2](/screenshots/2.png)
