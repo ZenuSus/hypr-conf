@@ -8,7 +8,7 @@ My hyprland, waybar and etc. config
 4. All done! If you have any problem with config, contact with me in  [my telegram chat](https://t.me/zenusuoff)
 
 > [!NOTE]
-> Don't forget to install `waybar`, `rofi` and `drun` <br>
+> Don't forget to install `waybar`, `rofi`, `hyprlock` and `wlogout` <br>
 > For better expirience install the [apple emoji font](https://github.com/samuelngs/apple-emoji-linux/releases)
 
 ## Screenshoots
